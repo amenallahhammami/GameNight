@@ -28,6 +28,8 @@ services:
       - "3000:3000"
   server: 
     image: dutchman5/game_night_server:latest
+    environment:
+      MONGODB_URI: mongodb://admin:pass@mongodb:27017
     ports:
       - "3001:3001"
     depends_on:
